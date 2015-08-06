@@ -22,6 +22,7 @@ class UserRepoEloquent implements UserRepoInterface
     }
 }
 
+// We'd put this in a service provider
 App::bind('UserRepoInterface', function ($app) {
     return new UserRepoEloquent();
 });
